@@ -288,8 +288,8 @@ html, body {
 @media (max-width: 480px) {
   .close-button {
     position: absolute;
-    top: 12px;
-    right: 0px;
+    top: 0px;
+    right: 12px;
     background: none;
     border: none;
     color: white;
@@ -300,3 +300,14 @@ html, body {
   }
 }
 
+
+
+@media (max-width: 480px) {
+  .model-heading{
+    color: white;
+    font-size: 2rem;
+   
+    text-transform: capitalize;
+    letter-spacing: 2px;
+  }
+}
