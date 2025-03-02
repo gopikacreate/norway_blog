@@ -28,9 +28,8 @@ Would I chase the lights again? In a heartbeat.`,
     {
       title: "The Night Tromsø Shimmered Below Me",
       image: getOptimizedImage("v1740924446/IMG_1174_bs8qcm.jpg"),
-      description:
-        "A City of Lights, Seen from the Top of the World ",
-        blog:`If you ever find yourself in Tromsø at night, do yourself a favor: get to higher ground.
+      description: "A City of Lights, Seen from the Top of the World ",
+      blog: `If you ever find yourself in Tromsø at night, do yourself a favor: get to higher ground.
 
 I had read about Fjellheisen, a cable car that takes you to one of the best viewpoints in the city. But something about simply "taking a cable car" felt too easy, too convenient. I wanted adventure, I wanted a story. So, I decided to make my way up the hard way—on foot.
 
@@ -42,14 +41,14 @@ And just like that, Tromsø stretched out below me in a sea of twinkling lights.
 
 I had seen city lights before, but this was different. This was special. Maybe it was the effort it took to get there, or maybe it was just the sheer beauty of it all, but in that moment, standing there above the world, I felt infinite.
 
-Would I do the hike again? Absolutely—but maybe next time, I’ll take the cable car down.`
+Would I do the hike again? Absolutely—but maybe next time, I’ll take the cable car down.`,
     },
     {
       title: "A Midnight Walk Through Arctic Snow",
       image: getOptimizedImage("v1740924419/IMG_1181_s2xicb.jpg"),
       description:
         "When the journey is just as breathtaking as the destination",
-        blog:`They say the best experiences happen when you least expect them, and my midnight walk through Tromsø’s snow-covered paths proved just that.
+      blog: `They say the best experiences happen when you least expect them, and my midnight walk through Tromsø’s snow-covered paths proved just that.
 
 The night had already been magical. The Northern Lights had graced the sky, and I had taken in the stunning view of the city from Fjellheisen. But as I made my way back, something unexpected happened—I realized I didn’t want the night to end.
 
@@ -63,7 +62,7 @@ I didn’t care where the path led. I didn’t care how cold my fingers were. In
 
 And that’s the thing about travel—it’s not just about the places you see. It’s about the moments that take your breath away when you least expect them.
 
-Would I wander through the Arctic snow at night again? Without a doubt.`
+Would I wander through the Arctic snow at night again? Without a doubt.`,
     },
   ];
 
@@ -122,11 +121,13 @@ Would I wander through the Arctic snow at night again? Without a doubt.`
           className="journal-modal"
         >
           <div className="modal-content">
-            <div className="model-padding"> <h2 className="model-heading">{selectedEntry.title}</h2>
-            <button className="close-button" onClick={closeModal}>
-              &times;
-            </button></div>
-           
+          
+              <h2 className="model-heading">{selectedEntry.title}</h2>
+              <button className="close-button" onClick={closeModal}>
+                &times;
+              </button>
+            
+
             <img
               src={selectedEntry.image}
               alt={selectedEntry.title}
@@ -134,7 +135,6 @@ Would I wander through the Arctic snow at night again? Without a doubt.`
             />
             <>{selectedEntry.description}</>
             <p>{selectedEntry.blog}</p>
-          
           </div>
         </Modal>
       )}
