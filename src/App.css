@@ -316,6 +316,7 @@ html, body {
 .model-padding{
   display: flex;
   flex-direction: row;
-  align-items: stretch;
+  justify-content: space-between;
+  gap:6px
   
 }
