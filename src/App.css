@@ -152,21 +152,20 @@
   border-radius: 15px;
   width: 90%;
   max-width: 700px;
-  max-height: 90vh; /* Ensures it doesn't take full screen */
   margin: 5vh auto;
   text-align: center;
   color: white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   position: relative;
-  overflow-y: auto; /* Enables scrolling if content overflows */
-  max-height: 80vh; /* Reduced max height */
-  overflow-y: auto; /* Allows scrolling */
+  overflow-y: auto;
+  max-height: 80vh;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centers content */
-  border: 2px solid rgb(81, 81, 81); /* Adds a white border */
-  
+  justify-content: center;
+  border: 2px solid rgb(81, 81, 81);
+  box-sizing: border-box; /* Ensures border is inside the width */
 }
+
 
 .modal-content {
   display: flex;
@@ -246,3 +245,14 @@
   bottom: 0;
   width: 100%;
 }
+
+html, body {
+  overflow-x: hidden;
+}
+@media (max-width: 480px) {
+  .journal-modal {
+    width: 95%;  /* Ensure it stays within the screen */
+    padding: 15px; /* Reduce padding slightly */
+  }
+}
+
