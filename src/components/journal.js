@@ -122,10 +122,11 @@ Would I wander through the Arctic snow at night again? Without a doubt.`
           className="journal-modal"
         >
           <div className="modal-content">
-            <h2 className="model-heading">{selectedEntry.title}</h2>
+            <div className="model-padding"> <h2 className="model-heading">{selectedEntry.title}</h2>
             <button className="close-button" onClick={closeModal}>
               &times;
-            </button>
+            </button></div>
+           
             <img
               src={selectedEntry.image}
               alt={selectedEntry.title}
