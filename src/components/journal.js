@@ -122,7 +122,7 @@ Would I wander through the Arctic snow at night again? Without a doubt.`,
         >
           <div className="modal-content">
           
-              <h2 className="model-heading">{selectedEntry.title}</h2>
+            
               <button className="close-button" onClick={closeModal}>
                 &times;
               </button>
@@ -133,6 +133,7 @@ Would I wander through the Arctic snow at night again? Without a doubt.`,
               alt={selectedEntry.title}
               className="modal-image"
             />
+              <h2 className="model-heading">{selectedEntry.title}</h2>
             <>{selectedEntry.description}</>
             <p>{selectedEntry.blog}</p>
           </div>
