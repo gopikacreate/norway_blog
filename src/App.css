@@ -1,38 +1,298 @@
-.App {
+/* CSS Styles */
+
+.hero {
+  position: relative;
+  text-align: center;
+  background: url(../src/images/norway/IMG_1189.JPG) no-repeat center center/cover;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  font-size: 1rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: opacity 0.3s;
+  font-family: 'Raleway', sans-serif;
+}
+
+.nav-link:hover {
+  opacity: 0.7;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+}
+
+.hero-content {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  font-size: 4rem;
+  font-weight: bold;
+  font-family: 'Playfair Display', serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.subtitle {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  font-family: 'Playfair Display', serif;
+}
+.author {
+  font-size: 1rem;
+  font-family: 'Playfair Display', serif;
+  color: white;
+  margin-top: 10px;
+  opacity: 0.8;
+}
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  padding: 20px;
+  background-color: black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.gallery-item {
+  overflow: hidden;
+  border: 5px solid black;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* journal */
+.journal-carousel {
+  background-color: #121212;
+  color: white;
+  padding: 60px 25px;
+  text-align: center;
+  
+
+
+
+}
+
+.journal-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.journal-slide {
+  position: relative;
+  cursor: pointer;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  max-width: 800px;
+  
+  
+  
+}
+
+.journal-slide:hover {
+  transform: scale(1.02);
+}
+
+.journal-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  
+}
+
+.journal-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  text-align: left;
+}
+
+.journal-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.journal-description {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Modal Styling */
+/* Updated Modal Styling */
+.journal-modal {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 700px;
+  max-height: 90vh; /* Ensures it doesn't take full screen */
+  margin: 5vh auto;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow-y: auto; /* Enables scrolling if content overflows */
+  max-height: 80vh; /* Reduced max height */
+  overflow-y: auto; /* Allows scrolling */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content */
+  border: 2px solid rgb(81, 81, 81); /* Adds a white border */
+  
+}
+
+.modal-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  max-height: 85vh; /* Prevents overflow */
+  
+}
+
+.modal-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain; /* Ensures full visibility */
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.modal-text {
+  font-size: 1rem;
+  padding: 10px;
+  max-height: 200px; /* Limits height to prevent excessive space */
+  overflow-y: auto; /* Enables scrolling if needed */
+}
+
+.close-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
   color: white;
+  font-size: 2rem; /* Increased size */
+  
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.close-button:hover {
+  transform: scale(1.2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.modal-content p {
+  
+ 
+  padding: 10px 20px 40px 10px;
+  text-align: center;
+}
+/* Hide scrollbar but keep functionality */
+.journal-modal::-webkit-scrollbar {
+  width: 6px; /* Slim scrollbar */
+}
+
+.journal-modal::-webkit-scrollbar-track {
+  background: transparent; /* Hide track */
+}
+
+.journal-modal::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5); /* Slightly visible scrollbar */
+  border-radius: 10px;
+}
+
+.journal-modal::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.ReactModal__Overlay {
+  background-color:transparent !important; /* Change to desired color */
+}
+
+.footer {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 20px 0px;
+  font-size: 14px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+/* slick-prev, .slick-next */
+@media (max-width: 768px) {
+  .footer {
+    font-size: 12px;
+    padding: 15px;
   }
 }
+
+.slick-prev, .slick-next {
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  opacity: 1;
+}
+
+.slick-prev {
+  left: -20px !important; /* Default for larger screens */
+}
+
+.slick-next {
+  right: -20px !important;
+}
+
+/* Adjust for tablets and smaller screens */
+@media (max-width: 1024px) {
+  .slick-prev {
+    left: -20px  !important;
+  }
+
+  .slick-next {
+    right:-20px !important;
+  }
+}
+
+/* Adjust for mobile screens */
+@media (max-width: 768px) {
+  .slick-prev, .slick-next {
+    width: 30px;
+    height: 30px;
+  }
+
+  .slick-prev {
+    left: -20px  !important;
+  }
+
+  .slick-next {
+    right:-20px !important;
+  }
+}
+
