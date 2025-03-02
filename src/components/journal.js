@@ -3,10 +3,6 @@ import Slider from "react-slick";
 import Modal from "react-modal";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-import img9 from "../images/norway/IMG_1174.PNG";
-import img10 from "../images/norway/IMG_1175.PNG";
-import img11 from "../images/norway/IMG_1176.PNG";
 import { getOptimizedImage } from "../utils/cloudinary";
 
 export default function Journal() {
@@ -126,17 +122,18 @@ Would I wander through the Arctic snow at night again? Without a doubt.`
           className="journal-modal"
         >
           <div className="modal-content">
-            <h2>{selectedEntry.title}</h2>
+            <h2 className="model-heading">{selectedEntry.title}</h2>
+            <button className="close-button" onClick={closeModal}>
+              &times;
+            </button>
             <img
               src={selectedEntry.image}
               alt={selectedEntry.title}
               className="modal-image"
             />
-            <p>{selectedEntry.description}</p>
+            <>{selectedEntry.description}</>
             <p>{selectedEntry.blog}</p>
-            <button className="close-button" onClick={closeModal}>
-              &times;
-            </button>
+          
           </div>
         </Modal>
       )}
