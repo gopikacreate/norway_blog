@@ -26,7 +26,7 @@ I forgot about the cold. I forgot about everything. In that moment, it was just 
 Would I chase the lights again? In a heartbeat.`,
     },
     {
-      title: "Night Tromsø Shimmered Below Me",
+      title: "The Night Tromsø Shimmered Below Me",
       image: getOptimizedImage("v1740924446/IMG_1174_bs8qcm.jpg"),
       description:
         "A City of Lights, Seen from the Top of the World ",
