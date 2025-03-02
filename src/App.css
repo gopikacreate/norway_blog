@@ -229,8 +229,8 @@
   color: white;
   font-size: 2rem;
   position: absolute;
-  top: 23px;
-  right: 0px;
+
+  right: -12px;
   cursor: pointer;
   font-size: 24px;
  
@@ -291,20 +291,25 @@ html, body {
   }
 }
 
-/* @media (max-width: 480px) {
+@media (max-width: 480px) {
   .close-button {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 2rem; 
-    
-    cursor: pointer;
-    transition: transform 0.2s ease;
+     /* position: absolute;
+  top: 12px;
+  right: 12px; */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  top: 23px;
+  right: 0px;
+  cursor: pointer;
+  font-size: 24px;
+ 
+  cursor: pointer;
+  transition: transform 0.2s ease;
   }
-} */
+}
 
 
 @media (max-width: 480px) {
