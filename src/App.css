@@ -46,13 +46,15 @@
 }
 
 .title {
-  font-size: 4rem;
+  font-size: clamp(1rem, 4vw, 4rem);
+  /* font-size: 4rem; */
   font-weight: bold;
   font-family: 'Playfair Display', serif;
 }
 
 .subtitle {
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
+  font-size: clamp(0.6rem, 1.5vw, 1.5rem);
   margin-top: 10px;
   font-family: 'Playfair Display', serif;
 }
@@ -161,16 +163,22 @@
   padding: 20px;
   background: rgba(0, 0, 0, 0.7);
   text-align: left;
+  
+
 }
 
 .journal-title {
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
   font-weight: bold;
+  padding-right: 20px;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
 }
 
 .journal-description {
-  font-size: 1rem;
+  /* font-size: 1rem; */
   color: #ccc;
+ padding-right: 20px;
+ font-size: clamp(1.2rem, 2vw, 1rem);
 }
 
 /* Modal Styling */
