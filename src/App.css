@@ -227,6 +227,11 @@
   max-height: 200px; /* Limits height to prevent excessive space */
   overflow-y: auto; /* Enables scrolling if needed */
 }
+.modal-blog{
+  text-align: justify;
+  align-items: center;
+  line-height: 1.8;
+}
 
 .close-button {
   /* position: absolute;
